@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>System Admin Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url('../assets/backgroundimage.avif') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 30px 20px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .nav-menu a {
+      display: block;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: #ecf0f1;
+      font-size: 15px;
+    }
+
+    .nav-menu a:hover {
+      color: #007BFF;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 40px;
+      position: relative;
+    }
+
+    .main-content h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .dashboard-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: #b0d3ec;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .dashboard-image {
+      text-align: center;
+    }
+
+    .dashboard-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Officer Panel</h2>
+      <nav class="nav-menu">
+        <a href="#">Dashboard</a>
+       
+        <a href="#">Recent Logs</a>
+        <a href="#">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1>System Admin Dashboard</h1>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h3>Dashboard</h3>
+          <p>Total Documents : <strong>1245</strong></p>
+          <p>Verified : <strong>1020</strong></p>
+          <p>Flagged : <strong>48</strong></p>
+          <p>Pending Review : <strong>177</strong></p>
+        </div>
+
+        <div class="card">
+          <h3>AI Verification Summary</h3>
+          <p>Fake Detected : <strong>19</strong></p>
+          <p>Manual Reviews Required : <strong>35</strong></p>
+          <p>Accuracy Rate : <strong>95.3%</strong></p>
+        </div>
+
+        <div class="card">
+          <h3>System Logs</h3>
+          <p>Last Backup : <strong>2025-06-18 23:00</strong></p>
+          <p>Up time : <strong>99.98%</strong></p>
+          <p>Active Users : <strong>87</strong></p>
+        </div>
+      </div>
+
+      
+    </main>
+  </div>
+</body>
+</html>

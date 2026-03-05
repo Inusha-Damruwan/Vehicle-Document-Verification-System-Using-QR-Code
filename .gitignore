@@ -1,0 +1,49 @@
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# PHP / Composer
+vendor/
+composer.lock
+.env
+.env.local
+.env.*.local
+
+# XAMPP / Apache
+php_errorlog
+
+# Node
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Uploads, cache and generated files
+uploads/
+assets/cache/
+phpqrcode/cache/
+
+# Build
+dist/
+build/
+
+# SQL dumps
+*.sql
+
+# Temporary and backup files
+*.cache
+*.bak
+*.swp
+
+# Images or binaries that may be large
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Police Officer Register</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('../assets/backgroundimage.avif') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      max-width: 500px;
+      width: 100%;
+      color: white;
+    }
+
+    .form-box h2, .form-box h3 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .form-box h2 {
+      font-size: 28px;
+    }
+
+    .form-box h3 {
+      font-size: 20px;
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .links {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .links a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2>VEHICLE DOCUMENT</h2>
+      <h3>POLICE OFFICER REGISTER</h3>
+
+      <form id="registerForm" action="../process.php" method="post">
+        <label>Full Name</label>
+        <input type="text" name="fullname" placeholder="Enter Full Name" required>
+
+        <label>Police ID</label>
+        <input type="text" name="policeId" placeholder="Enter Police ID" required>
+
+        <label>Branch</label>
+        <input type="text" name="branch" placeholder="Enter Branch" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit Phone Number" required>
+
+        <label>Create Password</label>
+        <input type="password" name="password" placeholder="Enter Password" required>
+
+        <label>Re-enter Password</label>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+
+        <div class="links">
+          <a href="Officer_Login_Page.html">Already have an account? Login</a>
+        </div>
+
+        <button type="submit" name="officer_register">SIGN UP</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

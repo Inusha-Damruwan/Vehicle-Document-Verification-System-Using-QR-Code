@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vehicle Owner Login</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body{
+      background:url('../assets/backgroundimage.avif') no-repeat center center fixed;
+      background-size:cover;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .container{
+      background:rgba(0,0,0,0.75);
+      padding:40px;
+      border-radius:15px;
+      max-width:400px;
+      width:100%;
+      color:white;
+      box-shadow:0 0 20px rgba(0,0,0,0.7);
+    }
+
+    .login-box h2,.login-box h3{
+      text-align:center;
+      margin-bottom:15px;
+    }
+
+    .login-box h2{
+      font-size:28px;
+    }
+
+    .login-box h3{
+      font-size:22px;
+      color:#ccc;
+    }
+
+    label{
+      display:block;
+      margin-top:20px;
+      font-weight:bold;
+    }
+
+    input[type="text"],
+    input[type="password"]{
+      width:100%;
+      padding:10px;
+      margin-top:5px;
+      border-radius:5px;
+      border:none;
+      font-size:16px;
+    }
+
+    .links{
+      margin-top:15px;
+      text-align:center;
+    }
+
+    .links a{
+      color:#4da6ff;
+      text-decoration:none;
+      display:inline-block;
+      margin:5px 0;
+    }
+
+    .links a:hover{
+      text-decoration:underline;
+    }
+
+    button{
+      margin-top:20px;
+      width:100%;
+      padding:12px;
+      background-color:#007BFF;
+      border:none;
+      border-radius:5px;
+      font-weight:bold;
+      font-size:16px;
+      color:white;
+      cursor:pointer;
+      transition:background-color 0.3s ease;
+    }
+
+    button:hover{
+      background-color:#0056b3;
+    }
+
+    @media (max-width:480px){
+      .container{
+        padding:25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="login-box">
+
+      <h2>VEHICLE DOCUMENT</h2>
+      <h3>OWNER LOGIN</h3>
+
+      <!-- FORM -->
+      <form id="loginForm" action="/ProjectIII/process.php" method="POST">
+
+        <label for="nic">NIC NO</label>
+
+        <input 
+          type="text"
+          id="nic"
+          name="nic"
+          placeholder="Enter NIC No"
+          required
+          oninput="this.value=this.value.replace(/\s+/g,'').replace(/-/g,'').toUpperCase();"
+          pattern="^([0-9]{9}[VX]|[0-9]{12})$"
+          title="NIC must be old format (123456789V/X) or new format (200012345678)"
+        />
+
+        <label for="password">PASSWORD</label>
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter Password"
+          required
+        />
+
+        <button type="submit" name="owner_login">
+          SIGN IN
+        </button>
+
+        <div class="links">
+
+          <a href="Owner_Regiser_Page.html">
+            Register
+          </a>
+
+          <br>
+
+          <a href="Forgot password page.html">
+            Forgotten Password?
+          </a>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

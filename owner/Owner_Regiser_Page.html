@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vehicle Owner Register</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: url('../assets/backgroundimage.avif') no-repeat center center fixed; background-size: cover; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+    .container { background-color: rgba(0, 0, 0, 0.75); padding: 40px; border-radius: 15px; max-width: 450px; width: 100%; box-shadow: 0 0 20px rgba(0,0,0,0.7); color: white; }
+    h2, h3 { text-align: center; margin-bottom: 15px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 22px; color: #ccc; }
+    form { display: flex; flex-direction: column; }
+    label { margin-top: 15px; font-weight: bold; }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] { margin-top: 5px; padding: 10px; border-radius: 5px; border: none; font-size: 16px; }
+    .links { margin-top: 20px; text-align: center; }
+    .links a { color: #4da6ff; text-decoration: none; font-weight: 600; }
+    .links a:hover { text-decoration: underline; }
+    button { margin-top: 25px; padding: 12px; background-color: #007BFF; border: none; border-radius: 5px; color: white; font-weight: bold; font-size: 18px; cursor: pointer; transition: background-color 0.3s ease; }
+    button:hover { background-color: #0056b3; }
+    @media (max-width: 480px) { .container { padding: 25px 20px; } button { font-size: 16px; padding: 10px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2>VEHICLE DOCUMENT</h2>
+      <h3>VEHICLE OWNER REGISTER</h3>
+
+      <form id="registerForm" action="/ProjectIII/process.php" method="POST">
+        <label for="full_name">Full Name</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Name" required>
+
+        <label for="nic_no">NIC No</label>
+        <input type="text" id="nic_no" name="nic_no" placeholder="NIC Number" required
+               oninput="this.value=this.value.replace(/\s+/g,'').replace(/-/g,'').toUpperCase();"
+               pattern="^([0-9]{9}[VX]|[0-9]{12})$"
+               title="NIC must be old format (123456789V/X) or new format (200012345678)">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone number" required>
+
+        <label for="password">Create Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+
+        <label for="confirm_password">Re Enter Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Password" required>
+
+        <div class="links">
+          <a href="Owner_Login_Page.html">Already have an account? Login</a>
+        </div>
+
+        <button type="submit" name="owner_register">SIGN UP</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
